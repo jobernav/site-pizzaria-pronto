@@ -1,0 +1,252 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+ :root {
+     --cor-principal: #1a237e; /* Azul escuro (seu azul) */
+     --cor-secundaria: #3949ab; /* Azul mais claro */
+     --cor-texto: #ffffff; /* Branco para os parágrafos */
+     --cor-fundo: #000000; /* Fundo PRETO */
+     --cor-card: #121212; /* Preto um pouco mais claro para os cartões */
+ }
+ body {
+     line-height: 1.6;
+     color: var(--cor-texto); /* Texto branco em tudo */
+     background-color: var(--cor-fundo); /* Fundo preto na página toda */
+ }
+ .container {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+ /* Cabeçalho */
+ header {
+     background-color: var(--cor-fundo); /* Cabeçalho preto */
+     box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+ }
+ header .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 0;
+ }
+ .logo h1 {
+     color: var(--cor-principal); /* Logo azul */
+     font-size: 22px;
+ }
+ .menu {
+     display: flex;
+     list-style: none;
+     gap: 25px;
+ }
+ .menu a {
+     text-decoration: none;
+     color: var(--cor-texto); /* Links brancos */
+     font-weight: 500;
+     transition: color 0.3s;
+ }
+ .menu a:hover {
+     color: var(--cor-principal); /* Ao passar o mouse fica azul */
+ }
+ .menu-btn {
+     display: none;
+     font-size: 28px;
+     background: none;
+     border: none;
+     cursor: pointer;
+     color: var(--cor-texto);
+ }
+ /* Seção Hero */
+ .hero {
+     background-color: var(--cor-fundo); /* Fundo preto */
+     padding: 60px 0;
+ }
+ .hero .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 40px;
+     align-items: center;
+ }
+ .hero-texto h2 {
+     font-size: 36px;
+     color: var(--cor-principal); /* Título azul */
+     margin-bottom: 20px;
+ }
+ .hero-texto p {
+     font-size: 18px;
+     margin-bottom: 30px;
+     color: var(--cor-texto); /* Parágrafo branco */
+ }
+ .btn {
+     background-color: var(--cor-principal); /* Botão azul */
+     color: white;
+     padding: 20px 25px;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: 600;
+     transition: background 0.3s;
+    
+ }
+ .btn:hover {
+     background-color: var(--cor-secundaria); /* Azul mais claro ao passar o mouse */
+ }
+ .hero-imagem img {
+     width: 100%;
+     border-radius: 12px;
+     box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+ }
+ /* Seção Cardápio */
+ .titulo-secao {
+     text-align: center;
+     font-size: 30px;
+     color: var(--cor-principal); /* Título azul */
+     margin: 60px 0 40px;
+ }
+ .grid-cardapio {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+ }
+ .card-pizza {
+     background-color: var(--cor-card); /* Cartões com preto um pouco mais claro */
+     border-radius: 12px;
+     box-shadow: 0 3px 10px rgba(255,255,255,0.05);
+     overflow: hidden;
+     text-align: center;
+     padding-bottom: 20px;
+     transition: transform 0.3s;
+ }
+ .card-pizza:hover {
+     transform: translateY(-8px);
+ }
+ .card-pizza img {
+     width: 100%;
+     height: 180px;
+     object-fit: cover;
+ }
+ .card-pizza h3 {
+     margin: 15px 0 8px;
+     color: var(--cor-principal); /* Nome da pizza azul */
+ }
+ .card-pizza p {
+     font-size: 14px;
+     padding: 0 15px;
+     color: #cccccc; /* Descrição cinza claro (mais suave) */
+     margin-bottom: 10px;
+ }
+ .preco {
+     font-size: 20px;
+     font-weight: 700;
+     color: #69f0ae; /* Preço verde destaque */
+     display: block;
+     margin-bottom: 15px;
+ }
+ .btn-pedir {
+     background-color: var(--cor-secundaria); /* Botão pedir azul */
+     color: white;
+     padding: 8px 20px;
+     border-radius: 6px;
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 600;
+ }
+ .btn-pedir:hover {
+     background-color: var(--cor-principal);
+ }
+ /* Sobre */
+ .sobre {
+     background-color: var(--cor-card); /* Fundo diferente para destaque */
+     padding: 40px 0;
+ }
+ .sobre .titulo-secao {
+     color: var(--cor-principal);
+ }
+ .conteudo-sobre {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 40px;
+     align-items: center;
+ }
+ .texto-sobre p {
+     margin-bottom: 15px;
+     font-size: 16px;
+     color: var(--cor-texto); /* Texto branco */
+ }
+ .imagem-sobre img {
+     width: 100%;
+     border-radius: 12px;
+ }
+ /* Contato */
+ .contato {
+     background-color: var(--cor-fundo);
+     padding: 40px 0 60px;
+ }
+ .info-contato {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 30px;
+     text-align: center;
+ }
+ .info-contato h3 {
+     color: var(--cor-principal);
+     margin-bottom: 10px;
+ }
+ .info-contato p {
+     color: var(--cor-texto);
+ }
+ /* Rodapé */
+ footer {
+     background-color: var(--cor-card);
+     color: var(--cor-texto);
+     text-align: center;
+     padding: 20px 0;
+     font-size: 14px;
+ }
+ /* Responsivo */
+ @media (max-width:  768px) {
+     .menu {
+         position: absolute;
+         top: 70px;
+         left: 0;
+         right: 0;
+         background-color: var(--cor-fundo);
+         flex-direction: column;
+         text-align: center;
+         gap: 15px;
+         padding: 20px 0;
+         box-shadow: 0 5px 5px rgba(255,255,255,0.1);
+         display: none;
+     }
+     .menu.ativo {
+         display: flex;
+     }
+     .menu-btn {
+         display: block;
+     }
+     .hero .container, .conteudo-sobre {
+         grid-template-columns: 1fr;
+     }
+     .hero-texto h2 {
+         font-size: 28px;
+     }
+ }
+.Pizza deliciosa{
+ height: 30px;    
+}
+.Pizza Pepperoni{
+    height: 30px; 
+}
+.Pizza Marguerita{
+    height: 30px; 
+}
+.Pizza Quatro Queijos{
+    height: 30px; 
+}
+.Pizza Calabresa{
+    height: 30px; 
+}
